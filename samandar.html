@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="/assets/style/samandar.css">
+    <link rel="stylesheet" href="/assets/style/samandar.css">
+    <script src="/assets/javascript/samandar.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>Welcom to game </h1>
+            </div>
+            <div class="right">
+                <div class="dropdown">
+                    <div class="change">
+                        <button id="dropdown" class="dropdown-btn">change</button>
+                        <div class="dropdown-content">
+                            <h3>easiy</h3>
+                            <h3>normal</h3>
+                            <h3>hard</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="register">
+                    <a href="#" id="openModal">login </a>
+                    <div class="modal" id="myModal">
+                        <div class="modal-content">
+                            <h4>name entor</h4>
+                            <input type="text" id="userName" placeholder="Enter text">
+                            <button id="submitBtn">Submit</button>
+                            <button class="close-btn" id="closeModal"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="main">
             <div class="conteyner">
                 <h1 class="logo" id="started">Start game </h1>
@@ -16,4 +47,5 @@
         </div>
     </div>
 </body>
+
 </html>
