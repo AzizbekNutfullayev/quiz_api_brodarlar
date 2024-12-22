@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showQuestion {
+    width: 930px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btns {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.btns button {
+    width: 49%;
+}
