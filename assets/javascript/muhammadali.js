@@ -1,5 +1,3 @@
-
-
 let questions = [];
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -40,9 +38,12 @@ function nextQuestion() {
 }
 
 function showResults() {
-    document.getElementById("question").innerHTML = "Quiz Finished!";
+    document.getElementById("question").innerHTML = `
+        <div class="result">
+            <h2>O'yin Tugadi </h2>
+            <p>Ajoyib javob <strong>${correctAnswers}</strong> / <strong>${questions.length}</strong> .</p>
+        </div>`;
     document.querySelector('.btns').style.display = 'none';
-    document.getElementById("score").innerHTML = `Correct: ${correctAnswers}, Incorrect: ${incorrectAnswers}`;
     document.getElementById("restart").style.display = 'block';
 }
 
