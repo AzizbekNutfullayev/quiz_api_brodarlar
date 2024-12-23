@@ -4,6 +4,7 @@ const openModal = document.getElementById("openModal");
 const closeModal = document.getElementById("closeModal");
 const userName = document.getElementById("userName");
 const submitBtn = document.getElementById("submitBtn");
+const nextpage = document.getElementById('game')
 
 const openModalFunc = () => {
   alert("Enter your name");
@@ -20,7 +21,7 @@ const closeModalFunc = () => {
   modal.style.display = "none";
 };
 closeModal.addEventListener("click", closeModalFunc);
-window.addEventListener("click", function (e) {
+window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
@@ -29,5 +30,9 @@ axios
 .get('https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple')
 .then((response)=>{
   console.log(response.data); 
+  nextpage.addEventListener('click', () =>{
+    window.location.href = `muhammadali.html`
+  })
+
   
 })

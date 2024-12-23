@@ -1,3 +1,6 @@
+const nextPage = new URLSearchParams(window.location.search).get(
+      `https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple`
+)
 let questions = [];
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -68,6 +71,6 @@ axios
         displayQuestion(currentQuestionIndex);
     })
     .catch((error) => {
-        console.error('Error fetching questions:', error);
+        console.error('Error fetching questions:', error);  
         document.getElementById("question").innerHTML = "Failed to load questions.";
     });
