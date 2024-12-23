@@ -2,10 +2,35 @@
     margin: 0;
     padding: 0;
 }
+.container-father{
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://t4.ftcdn.net/jpg/04/39/13/37/360_F_439133763_FrLdhZsd5aGC23r9ATARuKJBr8ifZjIe.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #131314;
+    padding: 10px 0px;
+  }
+  .logo{
+    color: aliceblue;
+  }
+  .locol{
+    background-color: rgb(28, 19, 86);
+    width: 150px;
+    height: 30px;
+  }
 .container {
     width: 100%;
     height: 100vh;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +38,7 @@
 .showQuestion {
     width: 930px;
     height: 500px;
-    background-color: aqua;
+    background-color: rgba(55, 77, 125, 0.594);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -29,3 +54,65 @@
 .btns button {
     width: 49%;
 }
+.ansver{
+    color: aliceblue;
+    background-color: #131314;
+    width:200px ;
+    height: 50px;
+    margin-top: 20px;
+}
+.ansver:hover{
+    background-color: azure;
+    color: #131314;
+    border-radius: 10px;
+}
+.quation{
+    color: aliceblue;
+    font-size: 20px;
+
+}
+@media (max-width: 768px) {
+    .ansver {
+      font-size: 14px;
+      margin: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ansver {
+      font-size: 12px;
+      margin: 20px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+  }
+
+@media (max-width: 768px) {
+    .header {
+      font-size: 14px;
+      margin: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 12px;
+
+    }
+  }
+  @media (max-width: 480px) {
+    .showQuestion {
+      font-size: 12px;
+     width:700 ;
+     align-items: center;
+    }
+  }
+  @media (max-width: 480px) {
+    .quation {
+      font-size: 12px;
+     width:700 ;
+     align-items: center;
+    }
+  }
+ 
+  
