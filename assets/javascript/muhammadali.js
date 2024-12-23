@@ -71,3 +71,4 @@ axios
         console.error('Error fetching questions:', error);
         document.getElementById("question").innerHTML = "Failed to load questions.";
     });
+    
