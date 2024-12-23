@@ -31,7 +31,7 @@ axios
 .then((response)=>{
   console.log(response.data); 
   nextpage.addEventListener('click', () =>{
-    window.location.href = `muhammadali.html`
+    window.location.href = `./muhammadali.html`
   })
 
   
