@@ -1,3 +1,5 @@
+
+
 const nextPage = new URLSearchParams(window.location.search).get(
       `https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple`
 )
@@ -25,6 +27,7 @@ function displayQuestion(index) {
 function checkAnswer(selected, correct) {
     if (selected === correct) {
         correctAnswers++;
+        localStorage.setItem('quizScore', correctAnswers)
     } else {
         incorrectAnswers++;
     }
@@ -39,6 +42,7 @@ function nextQuestion() {
         showResults();
     }
 }
+const highScore = document.getElementById('locol'); 
 
 function showResults() {
     document.getElementById("question").innerHTML = `
@@ -48,6 +52,10 @@ function showResults() {
         </div>`;
     document.querySelector('.btns').style.display = 'none';
     document.getElementById("restart").style.display = 'block';
+
+    localStorage.setItem('quizScore', correctAnswers); 
+    let scores = localStorage.getItem('quizScore') || 0; 
+    highScore.innerHTML = scores; 
 }
 
 function startGameAgain() {
@@ -58,6 +66,7 @@ function startGameAgain() {
     document.getElementById("restart").style.display = 'none';
     document.getElementById("score").innerHTML = "";
     displayQuestion(currentQuestionIndex);
+    
 }
 
 document.getElementById("restart").onclick = startGameAgain;

@@ -23,10 +23,12 @@
   .logo{
     color: aliceblue;
   }
-  .locol{
-    background-color: rgb(28, 19, 86);
+  #locol{
+    background-color: rgb(56, 49, 101);
     width: 150px;
     height: 30px;
+    color: aliceblue;
+    padding: 5px;
   }
 .container {
     width: 100%;

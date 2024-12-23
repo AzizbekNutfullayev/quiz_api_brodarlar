@@ -7,13 +7,19 @@ const submitBtn = document.getElementById("submitBtn");
 const nextpage = document.getElementById('game')
 
 const openModalFunc = () => {
-  alert("Enter your name");
+   alert("Enter your name");
   modal.style.display = "flex";
+
 };
-openModal.addEventListener("click", openModalFunc);
+openModal.addEventListener("click", openModalFunc );
 
 submitBtn.addEventListener("click", () => {
   started.innerText = userName.value;
+  if (userName.value === '') {
+    return
+  }
+
+
   closeModalFunc();
 });
 
@@ -31,6 +37,9 @@ axios
 .then((response)=>{
   console.log(response.data); 
   nextpage.addEventListener('click', () =>{
+    if (userName.value=== '') {
+    alert('Enter your name')
+    }
     window.location.href = `./muhammadali.html`
   })
 
