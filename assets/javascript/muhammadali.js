@@ -57,6 +57,36 @@ function showResults() {
     let scores = localStorage.getItem('quizScore') || 0; 
     highScore.innerHTML = scores; 
 }
+function checkAnswer(selected, correct) {
+    const buttons = document.querySelectorAll('.btns button');
+  
+    buttons.forEach((btn) => {
+      btn.disabled = true; // barcha tugmalarni bloklaymiz
+      if (btn.innerHTML === correct) {
+        btn.classList.add('correct'); // to‘g‘ri javobni yashil qilamiz
+      } else if (btn.innerHTML === selected && selected !== correct) {
+        btn.classList.add('incorrect'); // noto‘g‘ri tanlangan javobni qizil qilamiz
+      }
+    });
+  
+    // Statistikani yangilaymiz
+    if (selected === correct) {
+      correctAnswers++;
+      localStorage.setItem('quizScore', correctAnswers);
+    } else {
+      incorrectAnswers++;
+    }
+  
+    // 2 soniyadan keyin keyingi savolga o'tadi
+    setTimeout(() => {
+      nextQuestion();
+      buttons.forEach((btn) => {
+        btn.classList.remove('correct', 'incorrect');
+        btn.disabled = false;
+      });
+    }, 2000);
+  }
+  
 
 function startGameAgain() {
     currentQuestionIndex = 0;

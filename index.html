@@ -10,44 +10,57 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <h1>Welcom to game </h1>
+    <div class="main-container">
+
+        <header class="game-header">
+            <!-- Chap taraf: Difficulty -->
+            <div class="game-dropdown">
+              <div class="dropdown-toggle" id="difficultyToggle">Select Difficulty ▾</div>
+              <ul class="difficulty-options" id="difficultyOptions">
+                <li data-value="easy">Easy</li>
+                <li data-value="normal">Normal</li>
+                <li data-value="hard">Hard</li>
+              </ul>
+              <div class="selected-level" id="selectedLevel">Selected: None</div>
             </div>
-            <div class="right">
-                <div class="dropdown">
-                    <div class=" ">
-                        <button id="dropdown" class="dropdown-btn">change</button>
-                        <div class="dropdown-content">
-                            <h3>easiy</h3>
-                            <h3>normal</h3>
-                            <h3>hard</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="register">
-                    <a href="#" id="openModal">login </a>
-                    <div class="modal" id="myModal">
-                        <div class="modal-content">
-                            <h4>name entor</h4>
-                            <input type="text" id="userName" placeholder="Enter text">
-                            <button id="submitBtn">Submit</button>
-                            <button class="close-btn" id="closeModal"></button>
-                        </div>
-                    </div>
-                </div>
+        
+            <!-- Markaz: Sarlavha -->
+            <div class="brand-logo">
+              <h1>Welcome to Game</h1>
             </div>
+        
+            <!-- O‘ng: Login -->
+            <div class="auth-section">
+              <a href="#" id="openModal">enter name </a>
+            </div>
+          </header>
+    
+        <!-- Modal -->
+        <div class="auth-modal" id="myModal">
+          <div class="auth-modal-content">
+            <h4>Enter your name</h4>
+            <input type="text" id="userName" placeholder="Enter name" />
+            <button id="submitBtn">Submit</button>
+            <button class="close-btn" id="closeModal">Close</button>
+          </div>
         </div>
-        <div class="main">
-            <div class="conteyner">
-                <h1 class="logo" id="started">Start game </h1>
-                <a href="muhammadali.html">
-                <button class="start_game " id="game">START</button>
+    
+        <!-- MAIN GAME CARD -->
+        <main class="game-section">
+          <div class="game-card">
+            <h1 class="game-start-text" id="started">Start Game</h1>
+            <a href="muhammadali.html">
+              <button class="game-start-button" id="game">START</button>
             </a>
-            </div>
-        </div>
-    </div>
+          </div>
+        </main>
+    
+        <!-- FOOTER -->
+        <footer class="game-footer">
+          <p>&copy; <span id="year"></span> Quiz Game by <strong>Azizbek</strong> | : <span id="footer-diff"></span></p>
+        </footer>
+    
+      </div>
 </body>
 
 </html>
